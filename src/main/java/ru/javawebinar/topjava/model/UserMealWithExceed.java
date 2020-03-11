@@ -21,4 +21,12 @@ public class UserMealWithExceed {
         this.calories = calories;
         this.exceed = exceed;
     }
+
+    @Override
+    public String toString() {
+        String exceeded;
+        if (exceed) exceeded = "Yes";
+        else exceeded = "No";
+        return "date - " + dateTime + ", description - " + description + ", calories - " + calories + ", exceeded - " + exceeded;
+    }
 }
