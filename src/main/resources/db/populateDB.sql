@@ -4,8 +4,8 @@ DELETE FROM users;
 ALTER SEQUENCE global_seq RESTART WITH 100000;
 
 INSERT INTO users (name, email, password, calories_per_day) VALUES
-  ('User', 'user@yandex.ru', '{noop}password', 2005),
-  ('Admin', 'admin@gmail.com', '{noop}admin', 1900);
+  ('User', 'user@yandex.ru', '{bcrypt}$2a$10$/hZ2L80AP6wPCrBlIm.OOeLklPv2qFHWO9U7soqTxicSM3ImUXQRm', 2005),
+  ('Admin', 'admin@gmail.com', '{bcrypt}$2a$10$0lp1kAK1bkzNqOBoZiKYp.uaD6BjWIKIZKD0ST4sRGXEuTMpc1A9K', 1900);
 
 INSERT INTO user_roles (role, user_id) VALUES
   ('ROLE_USER', 100000),
